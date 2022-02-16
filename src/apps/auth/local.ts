@@ -6,8 +6,7 @@ import { auth } from './auth';
 import createError from 'http-errors';
 import bcrypt from 'bcrypt';
 import { omit } from 'lodash';
-
-const { Strategy: LocalStrategy } = require('passport-local');
+import { Strategy as LocalStrategy } from 'passport-local';
 
 passport.use(new LocalStrategy({
   usernameField: 'email',
