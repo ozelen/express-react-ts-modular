@@ -15,7 +15,8 @@ Build a modular React/Express app with a simple authentication.
 
 ![System Architecture](./docs/diagram.png)
 
-## Reasoning
+# Reasoning
+## Backend
 ### NPM workspaces
 New NPM feature allows to start with a simple monorepo approach and divide the application modules to local packages without extra effort to manage the versioning and keeping updated and rebuilt in dev mode.
 
@@ -29,3 +30,11 @@ We use SQLite relation database for a quick start, that will be replaced with ot
 
 We use [Knex](https://knexjs.org/) query builder to quickly write and chain query clauses and filtering options.
 We don't use any of ORMs in order to keep the control on SQL queries until we have the complexity drastically growing. In future, it can be replaced with (Objection.js)[https://vincit.github.io/objection.js/] or (TypeORM)[https://typeorm.io/#/].
+
+We use UUID for identifying entities, in order to avoid possible collisions when we extract those into separate databases.
+
+### Forms and validation
+We use Formik library for a simple state management within forms validation schema is shared across frontend and backend and has been a single source of truth for both.
+
+### State management
+We don't use any state management until we need it. For the next step, we will
