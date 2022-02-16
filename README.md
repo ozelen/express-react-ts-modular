@@ -1,3 +1,16 @@
+# Rationale
+Build a modular React/Express app with a simple authentication.
+
+# Commands
+### Fullstack development**
+``` npm run dev ```
+### Frontend development
+``` npm run front-dev ```
+### Backend development
+``` npm run back-dev ```
+### DB Migrations
+``` npm run migrate ```
+
 # Application Architecture
 
 ![System Architecture](./docs/diagram.png)
